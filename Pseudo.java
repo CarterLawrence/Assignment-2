@@ -1,60 +1,50 @@
 package problem4;
 
 public class Pseudo {
-	public static int sum1 (int n){
+	public static int sum1 (int n){//O(N)
 		int sum;
-		int i;
 		sum = 0;
-		for(i = 0; i < n; i++){
+		for(int i = 0; i < n; i++){
 		sum++;
 		}
 		return sum;
 	}
-	public static int sum2 (int n){
+	public static int sum2 (int n){//O(N^2)
 		int sum;
-		int i;
-		int j;
 		sum = 0;
-		for(i = 0; i < n; i++){
-		for(j = 0; j < n; j++){
+		for(int i = 0; i < n; i++){
+		for(int j = 0; j < n; j++){
 		sum++;
 		}
 		}
 		return sum;
 	}
-	public static int sum3 (int n){
+	public static int sum3 (int n){//O(N^3)
 		int sum;
-		int i;
-		int j;
 		sum = 0;
-		for(i = 0; i < n; i++){
-		for(j = 0; j < n*n; j++){
+		for(int i = 0; i < n; i++){
+		for(int j = 0; j < n*n; j++){
 		sum++;
 		}
 		}
 		return sum;
 	}
-	public static int sum4 (int n){
+	public static int sum4 (int n){//O(N)
 		int sum;
-		int i;
-		int j;
 		sum = 0;
-		for(i = 0; i < n; i++){
-		for(j = 0; j < i; j++){
+		for(int i = 0; i < n; i++){
+		for(int j = 0; j < i; j++){
 		sum++;
 		}
 		}
 		return sum;
 	}
-	public static int sum5 (int n){
+	public static int sum5 (int n){//O(N^3)
 		int sum;
-		int i;
-		int j;
-		int k;
 		sum = 0;
-		for(i = 0; i < n; i++){
-		for(j = 0; j < i*i; j++){
-		for(k = 0; k < j; k++){
+		for(int i = 0; i < n; i++){
+		for(int j = 0; j < i*i; j++){
+		for(int k = 0; k < j; k++){
 		sum++;
 		}
 		}
@@ -63,14 +53,12 @@ public class Pseudo {
 	}
 	public static int sum6 (int n){
 		int sum;
-		int i;
 		int j = 0;
-		int k;
 		sum = 0;
-		for(i = 1; j < n; i++){
+		for(int i = 1; j < n; i++){
 		for(j = 1; j < i*i; j++){
 		if(j%i == 0){
-		for(k = 0; k < j; k++){
+		for(int k = 0; k < j; k++){
 		sum++;
 		}
 		}
